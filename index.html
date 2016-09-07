@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Фотокарта | Новопсков</title>
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="leaflet.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.12/css/perfect-scrollbar.min.css">
+	<link rel="image_src" href="img/photomap.png" />
+</head>
+<body>
+
+	<div class="auth">
+		<div class="content" align="center">
+			<span class="logo glyphicon glyphicon-camera"></span>
+			<div class="alert alert-info">
+				Чтобы продолжить авторизуйтесь через социальную сеть vk.com!
+			</div>
+			<div class="btn btn-primary dropdown-toggle" onclick="VK.Auth.login(authInfo);"><span class="glyphicon glyphicon-user"></span> Войти через vk.com</div>
+		</div>
+	</div>
+
+	<div class="no-photo">
+		<div class="content" align="center">
+			<span class="logo glyphicon glyphicon-remove"></span>
+			<div class="alert alert-info">
+				К сожалению сейчас не удалось получить фотки, при том что они точно есть, просто в данный момент vk API ничего не ответил. Мы уже сообщили об этой проблеме в vk, но еще не получили вменяемого ответа. Попробуйте перезагрузить страницу или зайти позже.
+			</div>
+		</div>
+	</div>
+
+	<div class="sidebar-box" style="display:none;">
+		<div class="sidebar-button"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+		<div class="sidebar">
+			<p class="title">Новые фото</p>
+		</div>
+	</div>
+
+	<div id="map"></div>
+
+	<div class="antoha_c"><a href="http://vk.com/antoha_xr2350" target="_blank">Шаповалов Антон</a></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+	<script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+	<script src="leaflet.js"></script>
+	<script src="http://maximeh.github.io/leaflet.bouncemarker/bouncemarker.js"></script>
+	<script src="js/notify.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.12/js/perfect-scrollbar.jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<script>
+		$(document).ready(function() {
+
+			$(".sidebar-box .sidebar-button").click(function() {
+				$(".sidebar-box").toggleClass("active");
+				$(this).toggleClass("no-anim");
+			});
+
+			$('.sidebar').perfectScrollbar();
+
+		})
+	</script>
+
+
+	<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter39296425 = new Ya.Metrika({ id:39296425, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/39296425" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
