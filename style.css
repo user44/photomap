@@ -301,10 +301,6 @@ a {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  -webkit-animation: circle-radius 3s cubic-bezier(0, 1.03, 0.72, 0.89) infinite;
-  -moz-animation: circle-radius 3s cubic-bezier(0, 1.03, 0.72, 0.89) infinite;
-  -o-animation: circle-radius 3s cubic-bezier(0, 1.03, 0.72, 0.89) infinite;
-  animation: circle-radius 3s cubic-bezier(0, 1.03, 0.72, 0.89) infinite;
 }
 
 .sidebar-button.no-anim i.fa.fa-clock-o:after {
