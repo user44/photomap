@@ -35,15 +35,21 @@
 	</div>
 
 	<div class="sidebar-box" style="display:none;">
-		<div class="sidebar-button"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+		<div class="sidebar-button" title="Сайдбар"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
 		<div class="sidebar">
 			<p class="title">Новые фото</p>
 		</div>
 	</div>
 
+	<div class="info-box">
+		<div class="info-button" title="Инфо"><i class="fa fa-info-circle" aria-hidden="true"></i></div>
+		<p>Подсвеченные зеленым фото на карте - это последние 20 новых фото.</p>
+		<p>В сайдбаре слева показаны последние ~ 30 новых фото.</p>
+	</div>
+
 	<div id="map"></div>
 
-	<div class="antoha_c"><a href="http://vk.com/antoha_xr2350" target="_blank">Шаповалов Антон</a></div>
+	<div class="antoha_c"><a href="http://vk.com/id14649620" target="_blank">Шаповалов Антон</a></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
@@ -64,6 +70,11 @@
 			});
 
 			$('.sidebar').perfectScrollbar();
+
+			//info box
+			$(".info-box .info-button").click(function() {
+				$('.info-box').toggleClass('active');
+			})
 
 		})
 	</script>

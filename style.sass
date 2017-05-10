@@ -95,6 +95,41 @@ a
   top: 50%
   position: absolute
 
+.info-box
+	padding: 10px 20px
+	width: 50%
+	height: auto
+	background: #fff
+	position: absolute
+	left: 25%
+	top: 0
+	z-index: 100
+	transform: translate3d(0, -100%, 0)
+	transition: .3s
+	&.active
+		box-shadow: -2px 5px 8px 0px rgba(0, 0, 0, 0.2)
+		transform: translate3d(0, 0, 0)
+	.info-button
+		position: absolute
+		left: 50%
+		top: 100%
+		padding: 3px 12px
+		background: #fff
+		box-shadow: 0px 7px 8px 0px rgba(0, 0, 0, 0.2)
+		border-radius: 0 0 4px 4px
+		transform: translate3d(-50%, 0, 0)
+		cursor: pointer
+		&:hover
+			i
+				opacity: .9
+				transition: .3s
+		i
+			font-size: 25px
+			color: #0453de
+	p
+		span
+			font-weight: 700
+
 .sidebar-box
   position: absolute
   top: 0
@@ -176,6 +211,14 @@ a
   .icon_photo
     width: 45px
     height: 45px
+
+@media only screen and (max-width: 800px)
+	.sidebar-button
+		i.fa.fa-clock-o:after
+			animation: none
+	.info-box
+		width: 90%
+		left: 5%
 
 @keyframes circle-radius
   0%

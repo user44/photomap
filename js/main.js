@@ -108,14 +108,14 @@ var getPhotos = function(radius_, count_) {
 
 			if (data.response[0].items.length == 0) {
 				setTimeout(function() {
-					// $.notify("Пустой ответ. Повторяем запрос...", {position: 'right top', className: 'info', showDuration: 200, autoHideDelay: 5000,});
 					toastr.info("Пустой ответ. Повторяем запрос...");
 					getPhotos(qRadius, photoCount);
 				}, 3500);
 
 			} else {
 				console.log('получено фото: ' + data.response[0].items.length);
-				// $.notify("Получено " + data.response[0].items.length + " фото, загружаю...", {position: 'right top', className: 'success', showDuration: 200, autoHideDelay: 6000,});
+				$('.info-box').append('<p>Всего фото: <span class="photo-quantity">'+ data.response[0].items.length +'</span></p>');
+
 				toastr.success("Получено " + data.response[0].items.length + " фото, загружаю...");
 				window.setTimeout(function() {
 					getLastPhotos(900, 40);
